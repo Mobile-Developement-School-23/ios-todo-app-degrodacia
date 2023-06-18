@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Enum для важности задачи
+
 enum Priority: String {
     case low = "неважная"
     case medium = "обычная"
@@ -15,7 +15,7 @@ enum Priority: String {
 }
 
 
-// Структура TodoItem
+
 struct TodoItem {
     let id: String
     let text: String
@@ -35,11 +35,12 @@ struct TodoItem {
         self.creationDate = creationDate
         self.modificationDate = modificationDate
     }
-
+    
 }
 
 
-// Парсинг Json
+
+// MARK: Parse JSON
 extension TodoItem {
     static func parse(json: Any) -> TodoItem? {
         guard let jsonDict = json as? [String: Any],
@@ -90,7 +91,9 @@ extension TodoItem {
     }
 }
 
-//Парсинг CSV 
+
+
+// MARK: Parse CSV
 extension TodoItem {
     static func parse(csv: String) -> TodoItem? {
         let components = csv.components(separatedBy: ";")
@@ -99,7 +102,7 @@ extension TodoItem {
         let id = components[0]
         let text = components[1]
         let priority: Priority = components[2] == "важная" ? .high :
-            components[2] == "неважная" ? .low : .medium
+        components[2] == "неважная" ? .low : .medium
         let isComplited = components[3] == "true"
         
         let creationDate = Date(timeIntervalSince1970: Double(components[4]) ?? Date().timeIntervalSince1970)
@@ -113,21 +116,19 @@ extension TodoItem {
     }
     
     var csv: String {
-        var result = "\(id);\(text);"
-        if priority != .medium {
-            result += "\(priority.rawValue);"
+        let idString = id
+        let textString = text
+        let priorityString: String
+        if priority == .medium {
+            priorityString = ""
         } else {
-            result += ";"
+            priorityString = priority.rawValue
         }
-        result += "\(isCompleted ? "true" : "false");"
-        result += "\(Int(creationDate.timeIntervalSince1970))"
+        let isCompletedString = isCompleted ? "true" : "false"
+        let deadlineString = deadline?.timeIntervalSince1970.description ?? ""
+        let creationDateString = creationDate.timeIntervalSince1970.description
+        let modificationDateString = modificationDate?.timeIntervalSince1970.description ?? ""
         
-        if let deadline = deadline {
-            result += ";" + "\(Int(deadline.timeIntervalSince1970))"
-        }
-        
-        return result
+        return "\(idString);\(textString);\(priorityString);\(isCompletedString);\(deadlineString);\(creationDateString);\(modificationDateString)"
     }
 }
-
-
