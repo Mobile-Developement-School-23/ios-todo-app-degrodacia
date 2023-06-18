@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED31970D2A3B30FF00759BBF /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31970C2A3B30FF00759BBF /* TodoItem.swift */; };
-		ED31970F2A3B695D00759BBF /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31970E2A3B695D00759BBF /* FileCache.swift */; };
 		ED3E05B72A3B1C4600404795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3E05B62A3B1C4600404795 /* AppDelegate.swift */; };
 		ED3E05B92A3B1C4600404795 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3E05B82A3B1C4600404795 /* SceneDelegate.swift */; };
 		ED3E05BB2A3B1C4600404795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3E05BA2A3B1C4600404795 /* ViewController.swift */; };
@@ -38,8 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ED31970C2A3B30FF00759BBF /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		ED31970E2A3B695D00759BBF /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
 		ED3E05B32A3B1C4600404795 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3E05B62A3B1C4600404795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED3E05B82A3B1C4600404795 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,8 +102,6 @@
 				ED3E05B62A3B1C4600404795 /* AppDelegate.swift */,
 				ED3E05B82A3B1C4600404795 /* SceneDelegate.swift */,
 				ED3E05BA2A3B1C4600404795 /* ViewController.swift */,
-				ED31970C2A3B30FF00759BBF /* TodoItem.swift */,
-				ED31970E2A3B695D00759BBF /* FileCache.swift */,
 				ED3E05BC2A3B1C4600404795 /* Main.storyboard */,
 				ED3E05BF2A3B1C4800404795 /* Assets.xcassets */,
 				ED3E05C12A3B1C4800404795 /* LaunchScreen.storyboard */,
@@ -266,8 +260,6 @@
 			files = (
 				ED3E05BB2A3B1C4600404795 /* ViewController.swift in Sources */,
 				ED3E05B72A3B1C4600404795 /* AppDelegate.swift in Sources */,
-				ED31970D2A3B30FF00759BBF /* TodoItem.swift in Sources */,
-				ED31970F2A3B695D00759BBF /* FileCache.swift in Sources */,
 				ED3E05B92A3B1C4600404795 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
