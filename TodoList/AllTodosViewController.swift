@@ -11,7 +11,7 @@ class AllTodosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let table = UITableView()
         // Do any additional setup after loading the view.
     }
     
